@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gobernadores de México en el tiempo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>Gobernadores de México</h1>
+      <p class="subtitle">Mandatos desde 1989 · datos INEGI + Wikipedia</p>
+    </div>
+    <div class="date-display" id="date-display">—</div>
+  </header>
+
+  <div class="file-warning" id="file-warning" hidden>
+    Abre con servidor local: <code>python3 -m http.server 8080</code> desde <code>mapa/gobernadores/</code>
+  </div>
+
+  <main class="layout">
+    <section class="map-panel">
+      <div class="loading" id="loading">
+        <span class="spinner"></span>
+        <span id="loading-text">Cargando mapa INEGI…</span>
+      </div>
+      <div class="map-wrap" id="map-wrap">
+        <svg id="map" role="img" aria-label="Mapa de México coloreado por partido del gobernador"></svg>
+        <div class="tooltip" id="tooltip" hidden></div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="controls">
+        <button type="button" class="btn" id="btn-play" aria-label="Reproducir">▶ Reproducir</button>
+        <button type="button" class="btn btn--ghost" id="btn-step" aria-label="Siguiente cambio">Siguiente cambio →</button>
+      </div>
+      <div class="slider-wrap">
+        <input type="range" id="time-slider" min="0" max="100" value="0" />
+        <div class="slider-labels">
+          <span id="label-min">1989</span>
+          <span id="label-max">2025</span>
+        </div>
+      </div>
+      <div class="changes" id="changes">
+        <h2>Cambios en esta fecha</h2>
+        <ul id="changes-list"></ul>
+      </div>
+      <div class="legend" id="legend">
+        <h2>Partido</h2>
+        <ul id="legend-list"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    Geometrías: <a href="https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee/" target="_blank" rel="noopener">INEGI Marco Geoestadístico</a>
+    · Mandatos: gobernadores_mexico_desde_1989.csv
+  </footer>
+
+  <script>
+    if (location.protocol === "file:") {
+      document.getElementById("file-warning").hidden = false;
+    }
+  </script>
+  <script src="timeline.js"></script>
+</body>
+</html>

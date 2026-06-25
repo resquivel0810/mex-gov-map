@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f1ea;
+  --surface: #fffef9;
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --accent: #006847;
+  --accent-hover: #004d35;
+  --border: #c8c0b4;
+  --state-fill: #e8e4dc;
+  --state-hover: #d4cfc4;
+  --mun-fill: #c5ddd3;
+  --mun-hover: #9fc9b8;
+  --stroke: #4a4a4a;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.header__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.header__subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.btn-back {
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--surface);
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-back:hover {
+  background: var(--accent-hover);
+}
+
+.main {
+  padding: 1rem 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.map-wrap {
+  position: relative;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+#map {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: default;
+}
+
+#map.view--estados path.region {
+  cursor: pointer;
+}
+
+path.region {
+  stroke: var(--stroke);
+  stroke-width: 0.6px;
+  vector-effect: non-scaling-stroke;
+  transition: fill 0.15s;
+}
+
+path.region--estado {
+  fill: var(--state-fill);
+}
+
+path.region--estado:hover,
+path.region--estado.is-hovered {
+  fill: var(--state-hover);
+}
+
+path.region--municipio {
+  fill: var(--mun-fill);
+}
+
+path.region--municipio:hover,
+path.region--municipio.is-hovered {
+  fill: var(--mun-hover);
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(255, 254, 249, 0.85);
+  font-size: 0.95rem;
+  color: var(--muted);
+  z-index: 2;
+}
+
+/* display:flex anulaba [hidden] y el spinner tapaba el mapa siempre */
+.loading[hidden] {
+  display: none !important;
+}
+
+.loading:not([hidden]) {
+  display: flex;
+}
+
+.loading__spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--surface);
+  background: var(--ink);
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 3;
+  transform: translate(-50%, -120%);
+}
+
+.file-warning {
+  margin: 1rem 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: #fff3cd;
+  border: 1px solid #e6c200;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.file-warning code {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.15rem 0.4rem;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 0 1.5rem 1.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}

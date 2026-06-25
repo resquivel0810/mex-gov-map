@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa de México — Estados y municipios</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__title">México</h1>
+      <p class="header__subtitle" id="subtitle">Divisiones estatales — haz clic en un estado</p>
+    </div>
+    <button type="button" class="btn-back" id="btn-back" hidden aria-label="Volver al mapa nacional">
+      ← México
+    </button>
+  </header>
+
+  <div class="file-warning" id="file-warning" hidden>
+    <strong>No abras este archivo con doble clic.</strong>
+    El navegador bloquea la carga de datos con <code>file://</code>.
+    En la terminal, desde la carpeta <code>mapa/</code>, ejecuta:
+    <code>python3 -m http.server 8080</code>
+    y entra a <a href="http://localhost:8080">http://localhost:8080</a>.
+  </div>
+
+  <main class="main">
+    <div class="map-wrap" id="map-wrap">
+      <div class="loading" id="loading" hidden>
+        <span class="loading__spinner"></span>
+        <span id="loading-text">Cargando…</span>
+      </div>
+      <svg id="map" role="img" aria-label="Mapa interactivo de México"></svg>
+      <div class="tooltip" id="tooltip" hidden></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Datos: límites municipales de México. Vista nacional = estados; clic = municipios del estado.
+  </footer>
+
+  <script>
+    if (location.protocol === "file:") {
+      document.getElementById("file-warning").hidden = false;
+    }
+  </script>
+  <script src="mapa.js"></script>
+</body>
+</html>

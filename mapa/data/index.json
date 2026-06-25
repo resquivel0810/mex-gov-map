@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Aguascalientes",
+    "slug": "aguascalientes",
+    "file": "municipios/aguascalientes.geojson"
+  },
+  {
+    "name": "Baja California",
+    "slug": "baja-california",
+    "file": "municipios/baja-california.geojson"
+  },
+  {
+    "name": "Baja California Sur",
+    "slug": "baja-california-sur",
+    "file": "municipios/baja-california-sur.geojson"
+  },
+  {
+    "name": "Campeche",
+    "slug": "campeche",
+    "file": "municipios/campeche.geojson"
+  },
+  {
+    "name": "Chiapas",
+    "slug": "chiapas",
+    "file": "municipios/chiapas.geojson"
+  },
+  {
+    "name": "Chihuahua",
+    "slug": "chihuahua",
+    "file": "municipios/chihuahua.geojson"
+  },
+  {
+    "name": "Coahuila",
+    "slug": "coahuila",
+    "file": "municipios/coahuila.geojson"
+  },
+  {
+    "name": "Colima",
+    "slug": "colima",
+    "file": "municipios/colima.geojson"
+  },
+  {
+    "name": "Distrito Federal",
+    "slug": "distrito-federal",
+    "file": "municipios/distrito-federal.geojson"
+  },
+  {
+    "name": "Durango",
+    "slug": "durango",
+    "file": "municipios/durango.geojson"
+  },
+  {
+    "name": "Guanajuato",
+    "slug": "guanajuato",
+    "file": "municipios/guanajuato.geojson"
+  },
+  {
+    "name": "Guerrero",
+    "slug": "guerrero",
+    "file": "municipios/guerrero.geojson"
+  },
+  {
+    "name": "Hidalgo",
+    "slug": "hidalgo",
+    "file": "municipios/hidalgo.geojson"
+  },
+  {
+    "name": "Jalisco",
+    "slug": "jalisco",
+    "file": "municipios/jalisco.geojson"
+  },
+  {
+    "name": "Michoacán",
+    "slug": "michoacan",
+    "file": "municipios/michoacan.geojson"
+  },
+  {
+    "name": "Morelos",
+    "slug": "morelos",
+    "file": "municipios/morelos.geojson"
+  },
+  {
+    "name": "México",
+    "slug": "mexico",
+    "file": "municipios/mexico.geojson"
+  },
+  {
+    "name": "Nayarit",
+    "slug": "nayarit",
+    "file": "municipios/nayarit.geojson"
+  },
+  {
+    "name": "Nuevo León",
+    "slug": "nuevo-leon",
+    "file": "municipios/nuevo-leon.geojson"
+  },
+  {
+    "name": "Oaxaca",
+    "slug": "oaxaca",
+    "file": "municipios/oaxaca.geojson"
+  },
+  {
+    "name": "Puebla",
+    "slug": "puebla",
+    "file": "municipios/puebla.geojson"
+  },
+  {
+    "name": "Querétaro",
+    "slug": "queretaro",
+    "file": "municipios/queretaro.geojson"
+  },
+  {
+    "name": "Quintana Roo",
+    "slug": "quintana-roo",
+    "file": "municipios/quintana-roo.geojson"
+  },
+  {
+    "name": "San Luis Potosí",
+    "slug": "san-luis-potosi",
+    "file": "municipios/san-luis-potosi.geojson"
+  },
+  {
+    "name": "Sinaloa",
+    "slug": "sinaloa",
+    "file": "municipios/sinaloa.geojson"
+  },
+  {
+    "name": "Sonora",
+    "slug": "sonora",
+    "file": "municipios/sonora.geojson"
+  },
+  {
+    "name": "Tabasco",
+    "slug": "tabasco",
+    "file": "municipios/tabasco.geojson"
+  },
+  {
+    "name": "Tamaulipas",
+    "slug": "tamaulipas",
+    "file": "municipios/tamaulipas.geojson"
+  },
+  {
+    "name": "Tlaxcala",
+    "slug": "tlaxcala",
+    "file": "municipios/tlaxcala.geojson"
+  },
+  {
+    "name": "Veracruz",
+    "slug": "veracruz",
+    "file": "municipios/veracruz.geojson"
+  },
+  {
+    "name": "Yucatán",
+    "slug": "yucatan",
+    "file": "municipios/yucatan.geojson"
+  },
+  {
+    "name": "Zacatecas",
+    "slug": "zacatecas",
+    "file": "municipios/zacatecas.geojson"
+  }
+]
